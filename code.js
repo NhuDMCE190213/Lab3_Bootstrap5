@@ -80,7 +80,7 @@ function updateArray(index) {
     dataArray[index].name = document.getElementById("editProductName").value;
     dataArray[index].price = document.getElementById("editProductPrice").value;
     dataArray[index].status = document.getElementById("editProductStatus").value;
-    loadData();
+    searchElements();
 }
 
 function removeButtonAction(index) {
@@ -90,7 +90,7 @@ function removeButtonAction(index) {
 
 function deleteElement(index) {
     dataArray.splice(index, 1);
-    loadData();
+    searchElements();
 }
 
 function addEventElement() {
@@ -99,7 +99,7 @@ function addEventElement() {
                     <p>Price</p>
                     <input type="text" class="form-control" id="addProductPrice">
                     <p>Status</p>
-                    <input type="text" class="form-control" id="addProductStatus">`;
+                    <input type="text" class="form-control" id="addProductStatus" value="In Stock">`;
 }
 
 function addElement() {
@@ -112,7 +112,7 @@ function addElement() {
         alert("The data of new product is miss! The addition is not complete!");
     } else {
         dataArray.push({ id: dataArray[dataArray.length - 1].id + 1, name: name, price: price, status: status });
-        loadData();
+        searchElements();
     }
 }
 

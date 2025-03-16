@@ -12,12 +12,17 @@
 .positionBodyPart {
     padding-left: 150px;
     padding-right: 150px;
+    padding-bottom: 30px;
     /* padding-top: 20px; */
 }
 
-table {
-    border: 1 solid red;
+td:nth-child(2), td:nth-child(3), th:nth-child(2), th:nth-child(3) {
+    text-align: left;
 }
+
+/* table {
+    border: 1 solid red;
+} */
 
 .numCol {
     width: 10%;
